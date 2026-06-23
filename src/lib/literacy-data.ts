@@ -1,14 +1,13 @@
 // Dados educacionais para alfabetização infantil (pt-BR)
 
 export interface LetterData {
-  letter: string;
-  lower: string;
-  word: string;
-  emoji: string;
-  color: string;
+  letter: string
+  lower: string
+  word: string
+  emoji: string
+  color: string
 }
 
-// Alfabeto completo com palavra e emoji associados
 export const ALPHABET: LetterData[] = [
   { letter: "A", lower: "a", word: "Abacaxi", emoji: "🍍", color: "#FF6B6B" },
   { letter: "B", lower: "b", word: "Bola", emoji: "⚽", color: "#4ECDC4" },
@@ -36,14 +35,13 @@ export const ALPHABET: LetterData[] = [
   { letter: "X", lower: "x", word: "Xícara", emoji: "☕", color: "#D63031" },
   { letter: "Y", lower: "y", word: "Ioga", emoji: "🧘", color: "#0984E3" },
   { letter: "Z", lower: "z", word: "Zebra", emoji: "🦓", color: "#2D3436" },
-];
+]
 
-// Palavras para o jogo Monta Palavras (por dificuldade)
 export interface WordItem {
-  word: string;
-  emoji: string;
-  syllables: number;
-  hint: string;
+  word: string
+  emoji: string
+  syllables: number
+  hint: string
 }
 
 export const WORDS_EASY: WordItem[] = [
@@ -55,7 +53,7 @@ export const WORDS_EASY: WordItem[] = [
   { word: "PATO", emoji: "🦆", syllables: 2, hint: "Quack quack!" },
   { word: "MÃE", emoji: "👩", syllables: 1, hint: "Cuida de você!" },
   { word: "PÃO", emoji: "🍞", syllables: 1, hint: "Comemos no café!" },
-];
+]
 
 export const WORDS_MEDIUM: WordItem[] = [
   { word: "ELEFANTE", emoji: "🐘", syllables: 4, hint: "Tem tromba!" },
@@ -64,7 +62,7 @@ export const WORDS_MEDIUM: WordItem[] = [
   { word: "BORBOLETA", emoji: "🦋", syllables: 4, hint: "Voa e é colorida!" },
   { word: "MORANGO", emoji: "🍓", syllables: 3, hint: "Fruta vermelha!" },
   { word: "GUITARRA", emoji: "🎸", syllables: 3, hint: "Instrumento musical!" },
-];
+]
 
 export const WORDS_HARD: WordItem[] = [
   { word: "ABACAXI", emoji: "🍍", syllables: 4, hint: "Fruta tropical espinhosa!" },
@@ -73,16 +71,15 @@ export const WORDS_HARD: WordItem[] = [
   { word: "MORCEGO", emoji: "🦇", syllables: 3, hint: "Voa de noite!" },
   { word: "CHUVEIRO", emoji: "🚿", syllables: 3, hint: "Tomamos banho!" },
   { word: "PINGUIM", emoji: "🐧", syllables: 3, hint: "Vive no gelo!" },
-];
+]
 
-export const ALL_WORDS = [...WORDS_EASY, ...WORDS_MEDIUM, ...WORDS_HARD];
+export const ALL_WORDS = [...WORDS_EASY, ...WORDS_MEDIUM, ...WORDS_HARD]
 
-// Palavras para o jogo de Sílabas (organizadas por nº de sílabas)
 export interface SyllableWord {
-  word: string;
-  emoji: string;
-  syllables: number;
-  syllableBreakdown: string[];
+  word: string
+  emoji: string
+  syllables: number
+  syllableBreakdown: string[]
 }
 
 export const SYLLABLE_WORDS: SyllableWord[] = [
@@ -100,9 +97,8 @@ export const SYLLABLE_WORDS: SyllableWord[] = [
   { word: "ELEFANTE", emoji: "🐘", syllables: 4, syllableBreakdown: ["E", "LE", "FAN", "TE"] },
   { word: "BORBOLETA", emoji: "🦋", syllables: 4, syllableBreakdown: ["BOR", "BO", "LE", "TA"] },
   { word: "BICICLETA", emoji: "🚲", syllables: 4, syllableBreakdown: ["BI", "CI", "CLE", "TA"] },
-];
+]
 
-// Palavras para o jogo "Qual é a Letra?" (identificar inicial)
 export const INITIAL_LETTER_WORDS: WordItem[] = [
   { word: "ARCO-ÍRIS", emoji: "🌈", syllables: 3, hint: "A" },
   { word: "BALÃO", emoji: "🎈", syllables: 2, hint: "B" },
@@ -130,7 +126,7 @@ export const INITIAL_LETTER_WORDS: WordItem[] = [
   { word: "XADREZ", emoji: "♟️", syllables: 2, hint: "X" },
   { word: "IOGURTE", emoji: "🥛", syllables: 3, hint: "Y" },
   { word: "ZEBRA", emoji: "🦓", syllables: 2, hint: "Z" },
-];
+]
 
 export const GAME_LIST = [
   { id: "abc", name: "ABC Vivo", emoji: "🔠", color: "#FF6B6B", description: "Conheça as letras com sons e imagens!" },
@@ -142,8 +138,8 @@ export const GAME_LIST = [
   { id: "memory", name: "Jogo da Memória", emoji: "🧠", color: "#AA96DA", description: "Encontre os pares maiúsculo/minúsculo!" },
   { id: "order", name: "Ordem Alfabética", emoji: "📚", color: "#C7CEEA", description: "Coloque as letras em ordem!" },
   { id: "syllables", name: "Sílabas", emoji: "👏", color: "#FFD93D", description: "Conte as sílabas batendo palmas!" },
-  { id: "whatsletter", name: "Qual é a Letra?", emoji: "🎧", color: "#6BCB77", description: "Ouça a palavra e adivhe a primeira letra!" },
+  { id: "whatsletter", name: "Qual é a Letra?", emoji: "🎧", color: "#6BCB77", description: "Ouça a palavra e adivinhe a primeira letra!" },
   { id: "bingo", name: "Bingo das Letras", emoji: "🎯", color: "#FF9F68", description: "Marque as letras na cartela!" },
-] as const;
+] as const
 
-export type GameId = (typeof GAME_LIST)[number]["id"];
+export type GameId = (typeof GAME_LIST)[number]["id"]

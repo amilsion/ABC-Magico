@@ -1,6 +1,6 @@
 # ABC Mágico 🎨✨
 
-**Projeto infantil para alfabetização** – Aplicação web interativa e divertida para crianças aprenderem o alfabeto brincando! Versão 2.0 reescrita em Next.js + TypeScript com **11 jogos educativos**.
+**Projeto infantil para alfabetização** – Aplicação web interativa e divertida para crianças aprenderem o alfabeto brincando! Versão 2.0 reescrita em Vue js + TypeScript com **11 jogos educativos**.
 
 > 🎮 Versão original (HTML único): [demo online](https://abc-magico.netlify.app/) · repositório base: [amilsion/abc-magico](https://github.com/amilsion/abc-magico)
 
@@ -59,7 +59,8 @@ O **ABC Mágico** é uma ferramenta educativa pensada para crianças em fase de 
 
 ## 🛠️ Tecnologias Utilizadas
 
-- [**Next.js 16**](https://nextjs.org/) com App Router
+- [**Vue 3 + Composition API**](https://vuejs.org/)
+- [**Vite 6 como bundler**](https://v6.vite.dev/)
 - [**TypeScript 5**](https://www.typescriptlang.org/)
 - [**Tailwind CSS 4**](https://tailwindcss.com/)
 - [**shadcn/ui**](https://ui.shadcn.com/) – componentes de interface
@@ -87,7 +88,7 @@ Acesse diretamente pelo link (em breve):
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/SEU_USUARIO/abc-magico.git
+   git clone https://github.com/amilsion/abc-magico.git
    cd abc-magico
    ```
 
@@ -124,46 +125,6 @@ npm run start
 | `npm run build` | Build de produção |
 | `npm run start` | Roda a build de produção |
 | `npm run lint` | Verifica erros de código |
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-abc-magico/
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx          # Layout raiz + metadados SEO
-│   │   ├── page.tsx            # Menu principal + roteamento dos jogos
-│   │   └── globals.css         # Estilos globais (Tailwind + animações)
-│   ├── components/
-│   │   ├── games/
-│   │   │   ├── ABCVivo.tsx
-│   │   │   ├── MontaPalavras.tsx
-│   │   │   ├── CacaLetras.tsx
-│   │   │   ├── CacaPalavras.tsx
-│   │   │   ├── EscrevaLetra.tsx
-│   │   │   ├── JogoMemoria.tsx
-│   │   │   ├── CompletePalavra.tsx    # 🆕
-│   │   │   ├── OrdemAlfabetica.tsx    # 🆕
-│   │   │   ├── Silabas.tsx            # 🆕
-│   │   │   ├── QualLetra.tsx          # 🆕
-│   │   │   ├── BingoLetras.tsx        # 🆕
-│   │   │   ├── GameHeader.tsx         # Cabeçalho compartilhado
-│   │   │   ├── Confetti.tsx           # Confete animado
-│   │   │   ├── StarReward.tsx         # Estrelas flutuantes
-│   │   │   └── GameShell.tsx          # Wrapper de inicialização
-│   │   └── ui/                 # Componentes shadcn/ui
-│   ├── lib/
-│   │   ├── literacy-data.ts    # Dados (alfabeto, palavras, sílabas)
-│   │   ├── speech.ts           # Voz (TTS) + efeitos sonoros
-│   │   └── utils.ts            # Utilitários
-│   └── hooks/
-│       └── use-progress.ts     # Persistência de progresso (localStorage)
-├── public/
-├── package.json
-└── README.md
-```
 
 ---
 
@@ -239,7 +200,7 @@ Este projeto é open-source e está disponível sob a licença [MIT](LICENSE).
 
 ## 📞 Contato
 
-- 🐛 **Issues:** [abra uma issue](https://github.com/SEU_USUARIO/abc-magico/issues)
+- 🐛 **Issues:** [abra uma issue](https://github.com/amilsion/abc-magico/issues)
 - 💬 **Discussões:** use a aba Discussions do GitHub
 
 ---
